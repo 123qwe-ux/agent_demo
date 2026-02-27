@@ -1,4 +1,5 @@
 """网页抓取技能"""
+import re
 from langchain_core.tools import tool
 
 
@@ -22,6 +23,5 @@ class ScrapeSkill:
             resp.raise_for_status()
 
         doc = Document(resp.text)
-        import re
         text = re.sub(r"<[^>]+>", "", doc.summary())
         return text[:5000]
