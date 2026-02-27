@@ -1,0 +1,23 @@
+[project]
+name = "research-agent"
+version = "0.1.0"
+description = "智能调研 Agent - 多Agent协作自动生成研究报告"
+requires-python = ">=3.11"
+dependencies = [
+    "langchain>=0.3",
+    "langchain-openai>=0.3",
+    "langgraph>=0.2",
+    "mcp>=1.0",
+    "tavily-python>=0.5",
+    "httpx>=0.27",
+    "readability-lxml>=0.8",
+    "chromadb>=0.5",
+    "python-dotenv>=1.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "pytest-asyncio>=0.24",
+    "ruff>=0.8",
+]
